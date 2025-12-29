@@ -1,0 +1,89 @@
+.go-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: none;
+}
+
+.go-to-top.visible {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.go-top-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #64ffda;
+  color: #0a192f;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(100, 255, 218, 0.3);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.go-top-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 25px rgba(100, 255, 218, 0.4);
+}
+
+.go-top-button:active {
+  transform: scale(0.95);
+}
+
+.arrow-icon {
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.go-top-button:hover .arrow-icon {
+  transform: translateY(-3px);
+}
+
+.progress-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  z-index: 1;
+}
+
+.circle-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.circle-track {
+  fill: none;
+  stroke: rgba(10, 25, 47, 0.1);
+  stroke-width: 2;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 0;
+}
+
+.circle-fill {
+  fill: none;
+  stroke: #0a192f;
+  stroke-width: 2;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 0.1s linear;
+}
