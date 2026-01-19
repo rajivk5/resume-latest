@@ -3,6 +3,7 @@ import { Typography, Button, Box } from '@mui/material';
 import { gsap } from 'gsap';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
+import "./Hero.css"
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -31,12 +32,10 @@ const Hero = () => {
       sx={{
         height: '100vh',
         display: 'flex',
-        flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         background: 'linear-gradient(135deg, #1f4037, #99f2c8)',
         color: '#ffffff',
-        textAlign: 'center',
         padding: 2,
         position: 'relative',
         overflow: 'hidden',
@@ -52,105 +51,142 @@ const Hero = () => {
         }
       }}
     >
-      {/* Hero Heading */}
-      <div ref={heroRef} style={{ position: 'relative', zIndex: 1 }}>
-        <Typography
-          variant="h2"
-          sx={{
-            fontWeight: 700,
-            fontSize: { xs: '2.5rem', md: '4rem' },
-            marginBottom: 2,
-            color: '#ffffff',
-          }}
-          gutterBottom
-        >
-          Hi, I'm <span style={{ color: '#99f2c8', textShadow: '0 0 10px rgba(153, 242, 200, 0.3)' }}>Rajiv Kumar</span>
-        </Typography>
-
-        <Typography
-          variant="h5"
-          sx={{
-            fontWeight: 400,
-            marginBottom: 4,
-            fontSize: { xs: '1.2rem', md: '1.8rem' },
-            minHeight: '2.5rem',
-            color: '#bbbbbb',
-          }}
-        >
-          <TypeAnimation
-            sequence={[
-              'A Frontend Developer Crafting Amazing Experiences',
-              2000,
-              'Building Scalable Web Applications',
-              2000,
-              'Passionate About UI/UX Design',
-              2000,
-            ]}
-            speed={60}
-            repeat={Infinity}
-            style={{ display: 'inline-block',color:'white' }}
-          />
-        </Typography>
-      </div>
-
-      {/* Call-to-Action Buttons */}
-      <div ref={buttonRef} style={{ position: 'relative', zIndex: 1 }}>
-        <Box sx={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <Button
-            variant="contained"
+      {/* Left Side Content */}
+      <Box
+        sx={{
+          flex: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          justifyContent: 'center',
+          textAlign: 'left',
+          paddingLeft: { xs: '20px', md: '50px' },
+          position: 'relative',
+          zIndex: 1,
+        }}
+      >
+        {/* Hero Heading */}
+        <div ref={heroRef}>
+          <Typography
+            variant="h2"
             sx={{
-              backgroundColor: '#99f2c8',
-              color: '#121212',
-              width:'65%',
-              padding: '12px 28px',
-              fontWeight: 600,
-              borderRadius: '30px',
-              textTransform: 'capitalize',
-              fontSize: '1rem',
-              transition: 'all 0.3s ease',
-              '&:hover': {
-                backgroundColor: '#b8f5d9',
-                transform: 'translateY(-3px)',
-                boxShadow: '0 8px 20px rgba(153, 242, 200, 0.4)',
-              },
+              fontWeight: 700,
+              fontSize: { xs: '2.5rem', md: '4rem' },
+              marginBottom: 2,
+              color: '#ffffff',
             }}
-            href="#contact"
+            gutterBottom
           >
-            Contact Me
-          </Button>
-          <Button
-            variant="outlined"
+            Hi, I'm <span style={{ color: '#99f2c8', textShadow: '0 0 10px rgba(153, 242, 200, 0.3)' }}>Rajiv Kumar</span>
+          </Typography>
+
+          <Typography
+            variant="h5"
             sx={{
-              borderColor: 'rgba(153, 242, 200, 0.5)',
-              color: '#99f2c8',
-              padding: '12px 28px',
-              width:'65%',
-              fontWeight: 600,
-              borderRadius: '30px',
-              textTransform: 'capitalize',
-              fontSize: '1rem',
-              transition: 'all 0.3s ease',
-              '&:hover': {
-                backgroundColor: 'rgba(153, 242, 200, 0.08)',
-                transform: 'translateY(-3px)',
-                boxShadow: '0 8px 20px rgba(153, 242, 200, 0.2)',
-                borderColor: '#99f2c8',
-              },
+              fontWeight: 400,
+              marginBottom: 4,
+              fontSize: { xs: '1.2rem', md: '1.8rem' },
+              minHeight: '2.5rem',
+              color: '#bbbbbb',
             }}
-            href="https://drive.google.com/file/d/1UyRJy50KaYFSApTw019-H7uzH5BMxDu6/view"
-            target="_blank"
-            rel="noopener noreferrer"
           >
-            Download Resume
-          </Button>
-        </Box>
-      </div>
+            <TypeAnimation
+              sequence={[
+                'A Frontend Developer Crafting Amazing Experiences',
+                2000,
+                'Building Scalable Web Applications',
+                2000,
+                'Passionate About UI/UX Design',
+                2000,
+              ]}
+              speed={60}
+              repeat={Infinity}
+              style={{ display: 'inline-block', color: 'white' }}
+            />
+          </Typography>
+        </div>
+
+        {/* Call-to-Action Buttons */}
+        <div ref={buttonRef}>
+          <Box sx={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: '#99f2c8',
+                color: '#121212',
+                width: 'auto',
+                padding: '12px 28px',
+                fontWeight: 600,
+                borderRadius: '30px',
+                textTransform: 'capitalize',
+                fontSize: '1rem',
+                minWidth:'209px',
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  backgroundColor: '#b8f5d9',
+                  transform: 'translateY(-3px)',
+                  boxShadow: '0 8px 20px rgba(153, 242, 200, 0.4)',
+                },
+              }}
+              href="#contact"
+            >
+              Contact Me
+            </Button>
+            <Button
+              variant="outlined"
+              sx={{
+                borderColor: 'rgba(153, 242, 200, 0.5)',
+                color: '#99f2c8',
+                padding: '12px 28px',
+                width: 'auto',
+                fontWeight: 600,
+                borderRadius: '30px',
+                textTransform: 'capitalize',
+                fontSize: '1rem',
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  backgroundColor: 'rgba(153, 242, 200, 0.08)',
+                  transform: 'translateY(-3px)',
+                  boxShadow: '0 8px 20px rgba(153, 242, 200, 0.2)',
+                  borderColor: '#99f2c8',
+                },
+              }}
+              href="https://drive.google.com/file/d/1dYVsNYWwB9R7Ii51KuofBZRNqyuhZEN9/view"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download Resume
+            </Button>
+          </Box>
+        </div>
+      </Box>
+
+      {/* Right Side Image */}
+      <Box
+        sx={{
+          flex: 1,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          paddingRight: { xs: '20px', md: '50px' },
+          position: 'relative',
+          zIndex: 1,
+        }}
+      >
+        <img
+          id='dpImg'
+          src="/Assets/icons/dp.png"
+          alt=""
+        />
+      </Box>
 
       {/* Scroll Indicator */}
       <Box
         sx={{
           position: 'absolute',
           bottom: '40px',
+          left: '50%',
+          transform: 'translateX(-50%)',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',

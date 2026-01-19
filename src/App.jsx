@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 import About from './components/About';
 import GoToTop from './components/GoToTop';
 import ComingSoon from './components/ComingSoon';
-
+import LeetCode from './components/LeetCode';
 const HomePage = () => {
   return (
     <>
@@ -17,6 +17,7 @@ const HomePage = () => {
       <About />
       <MyEducation />
       <Projects />
+      <LeetCode/>
       <Contact />
       <Footer />
       <GoToTop />

@@ -1,0 +1,47 @@
+.leetcode-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional background decoration */
+.leetcode-container::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  top: -100px;
+  left: -100px;
+}
+
+.leetcode-container::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  bottom: -80px;
+  right: -80px;
+}
+
+.leetcode-image {
+  /* width: 100%; */
+  /* max-width: 600px; */
+  /* height: auto; */
+  /* border-radius: 12px; */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  /* transition: all 0.3s ease; */
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 95%;
+}
+

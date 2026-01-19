@@ -21,7 +21,7 @@ const ComingSoon = () => {
   }, []);
 
   function calculateTimeLeft() {
-    const launchDate = new Date("2025-08-01");
+    const launchDate = new Date("2026-08-01");
     const difference = launchDate - new Date();
 
     return {

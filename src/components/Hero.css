@@ -1,0 +1,163 @@
+#dpImg {
+    display: flex;
+    filter: drop-shadow(-8px -5px 12px rgba(0, 0, 0, 0.3)) drop-shadow(-12px 5px 15px rgba(0, 0, 0, 0.2)) drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.1));
+    position: absolute;
+    bottom: -294px;
+    right: 0;
+}
+
+/* Mobile Styles for Hero Section */
+@media screen and (max-width: 900px) {
+
+    /* Hero section layout adjustment */
+    #hero {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 20px !important;
+        height: auto !important;
+        min-height: 100vh !important;
+    }
+
+    /* Left content container */
+    #hero>div:first-child {
+        align-items: center !important;
+        text-align: center !important;
+        padding: 0 !important;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        width: 100% !important;
+    }
+
+    /* Right image container */
+    #hero>div:nth-child(2) {
+        display: none;
+        padding: 0 !important;
+        margin-top: 20px;
+        width: 100% !important;
+        order: -1;
+        /* Moves image above text on mobile */
+    }
+
+    /* Image styling */
+    #dpImg {
+        display: none;
+        position: relative !important;
+        bottom: 0 !important;
+        right: 0 !important;
+        max-width: 280px !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        display: block !important;
+        filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.2)) drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.1)) !important;
+    }
+
+    /* Typography adjustments */
+    #hero h2 {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 16px !important;
+    }
+
+    #hero h5 {
+        font-size: 1rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 32px !important;
+        min-height: 3rem !important;
+    }
+
+    /* Button container */
+    #hero>div:first-child>div:last-child {
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    /* Button adjustments */
+    #hero button {
+        padding: 10px 24px !important;
+        font-size: 0.9rem !important;
+        width: 100% !important;
+        max-width: 250px !important;
+        margin: 4px 0 !important;
+    }
+
+    /* Button container layout */
+    #hero>div:first-child>div:last-child>div {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    /* Scroll indicator positioning */
+    #hero>div:last-child {
+        bottom: 20px !important;
+        position: absolute !important;
+    }
+
+    /* Type animation container */
+    .react-type-animation {
+        display: inline-block !important;
+        height: 3.5rem !important;
+    }
+}
+
+/* Smaller mobile devices */
+@media screen and (max-width: 480px) {
+    #hero h2 {
+        font-size: 1.8rem !important;
+    }
+
+    #hero h5 {
+        font-size: 0.9rem !important;
+    }
+
+    #dpImg {
+        max-width: 220px !important;
+    }
+
+    #hero button {
+        padding: 8px 20px !important;
+        font-size: 0.85rem !important;
+        max-width: 220px !important;
+    }
+
+    .react-type-animation {
+        height: 3rem !important;
+    }
+}
+
+/* Tablet devices */
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+    #hero h2 {
+        font-size: 3rem !important;
+    }
+
+    #hero h5 {
+        font-size: 1.4rem !important;
+    }
+
+    #dpImg {
+        max-width: 248px !important;
+        bottom: -218px !important;
+    }
+}
+
+/* Adjust for very small screens */
+@media screen and (max-width: 350px) {
+    #hero {
+        padding: 10px !important;
+    }
+
+    #hero h2 {
+        font-size: 1.6rem !important;
+    }
+
+    #hero button {
+        padding: 8px 16px !important;
+        font-size: 0.8rem !important;
+        max-width: 200px !important;
+    }
+}
